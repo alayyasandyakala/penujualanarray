@@ -14,7 +14,7 @@
 
     .struk {
         background-color: white;
-        width: 340px; /* sedikit dilebarkan */
+        width: 320px;
         padding: 20px;
         border: 1px dashed #000;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -45,15 +45,11 @@
     }
 
     td {
-        padding: 4px 4px; /* jarak antar kolom */
+        padding: 3px 0;
     }
 
     .right {
         text-align: right;
-    }
-
-    .center {
-        text-align: center;
     }
 
     .total {
@@ -61,23 +57,18 @@
         font-weight: bold;
         padding-top: 5px;
     }
-
-    /* Tambah jarak antar baris agar tidak menempel */
-    tr:not(:last-child) td {
-        padding-bottom: 5px;
-    }
 </style>
 </head>
 <body>
 
 <div class="struk">
     <div class="header">
-        <h2>===POLGAN MART===</h2>
-        <p>l. Veteran Jl. Manunggal No.194, Helvetia, Kec. Sunggal, Kabupaten Deli Serdang, Sumatera Utara 20116<br>Politeknik Ganesha Medan</p>
+        <h2>POLGAN MART</h2>
+        <p>Jl. Veteran Jl. Manunggal No.194, Helvetia, Kec. Sunggal, Kabupaten Deli Serdang, Sumatera Utara 20116<br>Politeknik Teknik Ganesha Medan</p>
         <p>Tanggal: <?php echo date('d/m/Y H:i:s'); ?></p>
     </div>
 
     <?php
-    // DAFTAR BARANG DAN HARGA
-    $barang = ["Masker medis", "Air mineral", "Kertas HVS", "Tali ID card", "Hand sanitizer", "Coca Cola ", "Pop Mie", "Roti Isi",];
-    $harga  = [4000, 4000, 8000, 5000, 15000, 18000, 10000, 14000, 6000, 18000];
+    // Tambahkan array $barang dan $harga
+    $barang = ["Sabun", "Sampo", "Odol", "Teh", "Kopi", "Susu", "Mie Instan", "Gula", "Beras", "Minyak Goreng"];
+    $harga  = [4000, 12000, 8000, 5000, 15000, 18000, 3500, 14000, 60000, 28000];
