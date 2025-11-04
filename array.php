@@ -92,3 +92,16 @@
         $jumlah[$i] = rand(1, 5);
         $total[$i] = $harga[$index] * $jumlah[$i];
     }
+
+     echo "<table>";
+    echo "<tr><td><b>Barang</b></td><td class='right'><b>Qty</b></td><td class='right'><b>Harga</b></td><td class='right'><b>Total</b></td></tr>";
+
+    foreach ($beli as $i => $nama_barang) {
+        echo "<tr>
+                <td>$nama_barang</td>
+                <td class='right'>{$jumlah[$i]}</td>
+                <td class='right'>Rp " . number_format($harga[array_search($nama_barang, $barang)], 0, ',', '.') . "</td>
+                <td class='right'>Rp " . number_format($total[$i], 0, ',', '.') . "</td>
+              </tr>";
+        $grandtotal += $total[$i];
+    }
