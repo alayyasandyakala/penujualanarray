@@ -72,3 +72,23 @@
     // Tambahkan array $barang dan $harga
     $barang = ["Sabun", "Sampo", "Odol", "Teh", "Kopi", "Susu", "Mie Instan", "Gula", "Beras", "Minyak Goreng"];
     $harga  = [4000, 12000, 8000, 5000, 15000, 18000, 3500, 14000, 60000, 28000];
+
+      // Tambahkan array untuk pembelian
+    $beli = [];
+    $jumlah = [];
+    $total = [];
+    $grandtotal = 0;
+
+    // Acak urutan barang agar tidak sama
+    shuffle($barang);
+
+    // Tentukan jumlah produk yang dibeli (acak 3–6 item)
+    $jumlah_produk = rand(3, 6);
+
+    // Pilih barang dan jumlah beli secara acak
+    for ($i = 0; $i < $jumlah_produk; $i++) {
+        $index = array_search($barang[$i], ["Sabun", "Sampo", "Odol", "Teh", "Kopi", "Susu", "Mie Instan", "Gula", "Beras", "Minyak Goreng"]);
+        $beli[$i] = $barang[$i];
+        $jumlah[$i] = rand(1, 5);
+        $total[$i] = $harga[$index] * $jumlah[$i];
+    }
